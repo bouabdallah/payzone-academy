@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayZone Academy | احترف بطاقة RedotPay</title>
+    <!-- استدعاء ستايل تايلوند السريع للاستضافة المباشرة -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { background-color: #0F1115; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#00B2FF]/30">
+
+    <!-- الخلفية المتوهجة الفاخرة -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-[#00B2FF]/10 rounded-full filter blur-[120px] pointer-events-none"></div>
+
+    <!-- النافبار العلوية المحدثة والمتجاوبة بنسبة 100% مع الهواتف -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0F1115]/90 backdrop-blur-md border-b border-white/[0.05] py-3 px-4">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+            <a href="#" class="text-lg font-black text-white shrink-0"><span class="text-[#00B2FF]">PayZone</span> Academy</a>
+            <div class="flex items-center gap-3 text-xs md:text-sm font-medium overflow-x-auto whitespace-nowrap pb-1 sm:pb-0">
+                <button onclick="switchTab('home')" class="hover:text-[#00B2FF] transition px-1 py-1">الرئيسية</button>
+                <button onclick="switchTab('course')" class="hover:text-[#00B2FF] transition px-1 py-1">الدروس</button>
+                <button onclick="switchTab('quiz')" class="hover:text-[#00B2FF] transition px-1 py-1">الاختبار</button>
+                <button onclick="switchTab('admin')" class="bg-white/5 px-2 py-1 rounded text-gray-300 hover:text-white transition">الأدمن ⚙️</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. الصفحة الرئيسية (HOME) -->
+    <div id="tab-home" class="tab-content pt-28 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-6">
+            <span class="inline-block px-3 py-1 rounded-full bg-[#00B2FF]/10 text-[#00B2FF] border border-[#00B2FF]/20 text-xs md:text-sm animate-pulse">⚡ أكاديمية الفينتك الشاملة لبطاقات العملات الرقمية</span>
+            <h1 class="text-3xl md:text-6xl font-black tracking-tight leading-tight px-2">احترف منصة <span class="text-[#00B2FF] drop-shadow-[0_0_15px_rgba(0,178,255,0.3)]">RedotPay</span> من الصفر إلى الاحتراف</h1>
+            <p class="text-gray-400 text-sm md:text-lg max-w-2xl mx-auto px-4">تعلم كيف تفتح حسابك، وتفعل الهوية، وتشحن رصيدك بالعملات الرقمية لتصدر بطاقتك الافتراضية وتتسوق عالمياً بسهولة.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-3 pt-4 px-4">
+                <button onclick="openAffiliate()" class="dynamic-affiliate-btn px-8 py-4 font-bold text-white rounded-xl bg-gradient-to-r from-[#00B2FF] to-[#007acc] hover:shadow-[0_0_25px_rgba(0,178,255,0.5)] transition w-full sm:w-auto">ابدأ التعلم مجاناً الآن</button>
+                <button onclick="switchTab('course')" class="px-8 py-4 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition w-full sm:w-auto">تصفح الدروس الفورية</button>
+            </div>
+
+            <!-- العدادات والإحصائيات متجاوبة تماماً -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto pt-12 px-2">
+                <div class="p-4 rounded-xl glass-card"><div class="text-2xl font-black text-[#00B2FF]">+15,000</div><div class="text-gray-400 text-[11px] mt-1">طالب نشط</div></div>
+                <div class="p-4 rounded-xl glass-card"><div class="text-2xl font-black text-[#00B2FF]">24+</div><div class="text-gray-400 text-[11px] mt-1">درس احترافي</div></div>
+                <div class="p-4 rounded-xl glass-card"><div class="text-2xl font-black text-[#00B2FF]">100%</div><div class="text-gray-400 text-[11px] mt-1">تحديثات مستمرة</div></div>
+                <div class="p-4 rounded-xl glass-card"><div class="text-2xl font-black text-[#00B2FF]">+50</div><div class="text-gray-400 text-[11px] mt-1">دليل مصور</div></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. لوحة تحكم الدروس والكورسات -->
+    <div id="tab-course" class="tab-content pt-28 pb-20 px-4 hidden">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <aside class="lg:col-span-1 p-4 rounded-xl glass-card h-fit space-y-2">
+                <h3 class="font-bold text-[#00B2FF] mb-3 text-sm">فهرس المسار التعليمي</h3>
+                <div class="p-3 rounded-lg bg-[#00B2FF]/10 text-[#00B2FF] text-xs font-medium cursor-pointer">1. مقدمة حول بطاقة RedotPay</div>
+                <div class="p-3 rounded-lg hover:bg-white/5 text-gray-400 text-xs cursor-pointer transition">2. إنشاء الحساب وتأكيد البريد</div>
+                <div class="p-3 rounded-lg hover:bg-white/5 text-gray-400 text-xs cursor-pointer transition">3. تفعيل الهوية (KYC) بالخطوات</div>
+            </aside>
+            <main class="lg:col-span-3 space-y-4">
+                <h1 class="text-xl md:text-2xl font-bold">الدرس 1: مقدمة حول منصة RedotPay ومميزاتها العالمية</h1>
+                <div class="aspect-video rounded-xl overflow-hidden border border-white/[0.08] bg-black">
+                    <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="RedotPay Video" allowfullscreen></iframe>
+                </div>
+                <div class="p-4 rounded-xl bg-orange-500/10 border-r-4 border-orange-500 text-xs text-orange-200 leading-relaxed">
+                    <strong class="block mb-1 text-orange-400">⚠️ تنبيه أمني حساس:</strong> لا تشارك أبداً كلمة مرورك أو كود التحقق الثنائي (2FA) مع أي شخص حرصاً على سلامة أموالك.
+                </div>
+                <div class="flex flex-col sm:flex-row justify-between items-center p-4 rounded-xl glass-card gap-3">
+                    <button onclick="this.innerText='✓ تم إكمال الدرس'" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 transition text-xs">تحديد الدرس كمكتمل</button>
+                    <button onclick="openAffiliate()" class="w-full sm:w-auto dynamic-affiliate-btn px-5 py-3 rounded-xl bg-[#00B2FF] text-black font-bold text-xs text-center hover:shadow-[0_0_15px_rgba(0,178,255,0.4)] transition">سجل الآن واحصل على 5$ مجاناً</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- 3. صفحة اختبار الجاهزية -->
+    <div id="tab-quiz" class="tab-content pt-28 pb-20 px-4 hidden">
+        <div class="max-w-xl mx-auto p-6 md:p-8 rounded-2xl glass-card text-center space-y-6">
+            <div id="quiz-box">
+                <span class="text-[11px] text-[#00B2FF] font-mono block mb-2">اختبار الجاهزية والأمان قبل البدء</span>
+                <h2 class="text-xl font-bold mb-6 leading-snug">هل تملك وثيقة هوية جاهزة وسارية المفعول لتفعيل حسابك فوراً؟</h2>
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="finishQuiz()" class="p-4 rounded-xl bg-white/5 hover:bg-[#00B2FF]/20 border border-white/10 hover:border-[#00B2FF] text-sm font-bold transition">نعم، متوفرة</button>
+                    <button onclick="finishQuiz()" class="p-4 rounded-xl bg-white/5 hover:bg-red-500/10 border border-white/10 text-sm text-gray-400 transition">ليس بعد</button>
+                </div>
+            </div>
+            <div id="quiz-result" class="hidden space-y-4">
+                <div class="text-3xl">🏆</div>
+                <h2 class="text-2xl font-black">تهانينا! أنت جاهز تماماً للانطلاق</h2>
+                <p class="text-gray-400 text-sm">نظام الأكاديمية يؤكد جاهزيتك. يمكنك الآن الانتقال للحصول على حسابك وبطاقتك بكفاءة عالية.</p>
+                <button onclick="openAffiliate()" class="dynamic-affiliate-btn w-full py-4 rounded-xl bg-gradient-to-r from-[#00B2FF] to-[#007acc] font-bold text-white text-sm shadow-lg">اضغط هنا لإنشاء حسابك وتفعيل الهدية</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. لوحة تحكم الأدمن (ADMIN) -->
+    <div id="tab-admin" class="tab-content pt-28 pb-20 px-4 hidden">
+        <div class="max-w-3xl mx-auto p-5 md:p-8 rounded-xl glass-card space-y-5">
+            <h2 class="text-lg font-bold text-[#00B2FF]">⚙️ لوحة الإشراف المركزية للأكاديمية</h2>
+            <p class="text-xs text-gray-400 leading-relaxed">تعديل رابط الإحالة (Affiliate Link) هنا سيقوم بتغيير وتحديث الروابط في جميع أزرار الموقع والصفحات تلقائياً دون تعديل الأكواد.</p>
+            <div class="space-y-2">
+                <label class="text-[11px] text-gray-400 block">رابط الأفلييت الترويجي الخاص بك:</label>
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <input type="url" id="affiliate-input" class="w-full p-3.5 rounded-xl bg-black/40 border border-white/10 focus:border-[#00B2FF] focus:outline-none font-mono text-xs" value="https://www.redotpay.com/register?referral=YOUR_DEFAULT_ID">
+                    <button onclick="saveLink()" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#00B2FF] text-black font-bold text-xs hover:bg-[#00B2FF]/90 transition shrink-0">حفظ وتعميم</button>
+                </div>
+                <span id="save-msg" class="text-green-400 text-[11px] hidden font-medium block pt-1">✓ تم حفظ وتحديث رابط الإحالة لجميع أزرار الأكاديمية بنجاح!</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- المنطق البرمجي (JavaScript Logic) -->
+    <script>
+        let currentLink = localStorage.getItem('global_affiliate_link') || 'https://www.redotpay.com/register?referral=YOUR_DEFAULT_ID';
+        document.getElementById('affiliate-input').value = currentLink;
+
+        function saveLink() {
+            const inputVal = document.getElementById('affiliate-input').value;
+            currentLink = inputVal;
+            localStorage.setItem('global_affiliate_link', inputVal);
+            document.getElementById('save-msg').classList.remove('hidden');
+            setTimeout(() => document.getElementById('save-msg').classList.add('hidden'), 3000);
+        }
+
+        function openAffiliate() {
+            window.open(currentLink, '_blank', 'noopener,noreferrer');
+        }
+
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+            document.getElementById('tab-' + tabId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function finishQuiz() {
+            document.getElementById('quiz-box').classList.add('hidden');
+            document.getElementById('quiz-result').classList.remove('hidden');
+        }
+    </script>
+</body>
+                  </html>
+                  
